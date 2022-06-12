@@ -1,5 +1,5 @@
-# Script to Access Census Apis
-The script in this directory is used to grab census data from the group of census apis. It currently work with the Decennial census and the ACS. It will likely work with other apis with minimal changes.
+# Script to Access Census APIs
+The script in this directory is used to grab census data from the group of census APIs. It currently work with the Decennial census and the ACS. It will likely work with other APIs with minimal changes.
 
 To prepare to run, simply run the command: 
 ````
