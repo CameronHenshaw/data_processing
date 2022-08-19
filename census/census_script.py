@@ -50,7 +50,6 @@ dfTotal = None
 #This loop goes through the list of codes and calls the api for each one, then appends the data in a dataframe
 for entry in tablecodes:
     code = entry[1]
-    #url  = f'https://api.census.gov/data/{year}/{censustype}/{secondpart}{numberofyears}?get={code},NAME&for={geography}:*&in=state:{stateid}%20county:{countyid}&key={key}'
     url  = f'https://api.census.gov/data/{year}/{censustype}/{secondpart}{numberofyears}?get=NAME,{code}&for={geography}:*&in=state:{stateid}%20county:{countyid}&key={key}'    
     response=requests.get(url)
     data = response.json()
@@ -66,8 +65,6 @@ for entry in tablecodes:
     else:
         dfTotal = dfTotal.append(df, ignore_index=True)
     
-print('done')    
 dfTotal.to_csv('data.csv')
+print('done')    
 
-#print(response.text)
-#https://api.census.gov/data/2010/dec/sf1?get=PCT012A015,PCT012A119&for=state:01&key=[user key]
