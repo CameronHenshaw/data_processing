@@ -15,7 +15,7 @@ if exists('./keyfile.json'):
 
 key = secrets['API_KEY']
 
-# Getting inputs for api for the inputs file
+# Getting inputs for api from the inputs file
 if exists('./inputs.json'):
     with open('inputs.json', 'r') as file:
         inputs = json.load(file)
@@ -27,7 +27,7 @@ countyid = inputs['COUNTYID']
 censustype = inputs['CENSUSTYPE']
 numberofyears = inputs['NUMBEROFYEARS']
 
-# Some of the chars in the url differ slightly between the two census types, so this if/else fixes that
+# Some of the characters in the url differ slightly between the two census types, so this if/else fixes that
 if censustype == 'dec':
     secondpart= 'sf'
     numberofyears = '1'
